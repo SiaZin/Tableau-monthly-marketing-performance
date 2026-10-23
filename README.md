@@ -42,6 +42,7 @@ An interactive **Tableau** dashboard designed to evaluate paid acquisition effic
 Metrics were calculated in Tableau via Calculated fields.
 
 ## Data preparation
+
 Before visualizing, I joined two tables. To perform the join, I aggregated `users.csv` to the day × channel × geo level (using `registration_date`) and joined it with `expenses.csv`. Used BigQuery and then connected it to Tableau.
 
 <details>
