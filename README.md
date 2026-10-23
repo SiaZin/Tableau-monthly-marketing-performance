@@ -1,4 +1,4 @@
-# monthly-marketing-performance-tableau
+# Tableau-monthly-marketing-performance
 Tableau dashboard and analysis of monthly marketing performance by channel, country, and device using ROAS, CAC, ARPU, ARPPU, payer conversion, and 90-day revenue metrics
 
 ## Repository Structure
@@ -33,6 +33,47 @@ Data description:
 
 > [!NOTE]
 > [ukr_marketing_channels_performance.pdf](ukr_marketing_channels_performance.pdf) - Full analysis in Ukrainian
+
+# Data preparation
+Before visualizing, I joined two tables. To perform the join, I aggregated `users.csv` to the day × channel × geo level (using `registration_date`) and joined it with `expenses.csv`. Used BigQuery and then connected it to Tableau.
+
+<details>
+<summary>Joining and aggregating</summary>
+  
+```
+WITH users_agg AS (
+  SELECT
+    registration_date AS date,
+    channel,
+    geo,
+    COUNT(DISTINCT id_user) AS registrations,
+    SUM(is_payer) AS payers,
+    ROUND(SUM(revenue_7d), 3) AS revenue_7d,
+    ROUND(SUM(revenue_90d), 3) AS revenue_90d
+  FROM `Tableau_homework.users`
+  GROUP BY date, channel, geo
+)
+SELECT
+  s.date,
+  s.channel,
+  s.geo,
+  s.spend,
+
+  COALESCE(u.registrations, 0) AS registrations,
+  COALESCE(u.payers, 0) AS payers,
+  COALESCE(u.revenue_7d, 0) AS revenue_7d,
+  COALESCE(u.revenue_90d, 0) AS revenue_90d
+
+FROM `Tableau_homework.spend` AS s
+LEFT JOIN users_agg AS u
+  ON s.date = u.date
+  AND s.channel = u.channel
+  AND s.geo = u.geo
+ORDER BY s.date, s.channel, s.geo;
+```
+</details>
+
+The results were saved to [`users_agg.csv`](users.csv)
 
 ## Results
 
