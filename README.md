@@ -1,7 +1,7 @@
 # Tableau-monthly-marketing-performance
 Tableau dashboard and analysis of monthly marketing performance by channel, country, and device using ROAS, CAC, ARPU, ARPPU, payer conversion, and 90-day revenue metrics
 
-<img src="/screenshots/dashboard.png" width="900" height="500">
+<img src="/screenshots/dashboard.png" width="900" height="600">
 
 
 > [!NOTE]
@@ -41,7 +41,7 @@ An interactive **Tableau** dashboard designed to evaluate paid acquisition effic
 
 Metrics were calculated in Tableau via Calculated fields.
 
-## Data preparation
+## 🔧Data preparation
 
 Before visualizing, I joined two tables. To perform the join, I aggregated `users.csv` to the day × channel × geo level (using `registration_date`) and joined it with `expenses.csv`. Used BigQuery and then connected it to Tableau.
 
@@ -83,7 +83,7 @@ ORDER BY s.date, s.channel, s.geo;
 
 The results were saved to [`joined_tables.csv`](joined_tables.csv)
 
-## Dashboard architecture
+## 📊Dashboard architecture
 
 ### KPI cards
 These specific metrics were chosen because they cover the entire logic: costs → registrations → paying users → revenue → payback.
@@ -111,20 +111,27 @@ The Heatmap ROAS displays the performance of each channel × geo pair. A standar
 The primary metric chosen for this block is ROAS (90 days), as it directly demonstrates whether a channel recoups invested funds within a specific channel × geo segment. The interpretation baseline is ROAS = 100% / 1.0x: above this threshold, revenue exceeds spend; below it, costs do not break even. This makes the block essential for driving budget reallocation decisions across geographies and channels.
 
 ### CAC for payers & ARPPU over time
+<img src="/screenshots/CAC_ARPPU.png" width="400" height="300">
 
 ### Payer Conversion Rate over time
+<img src="/screenshots/Payer_conversion_rate.png" width="400" height="300">
 
 ### Channels ROAS over time
+<img src="/screenshots/Channels_ROAS.png" width="400" height="400">
 
 ### Revenue vs Spend by channels
+<img src="/screenshots/Revenue_Spend.png" width="400" height="500">
 
 ### Devices performance
+<img src="/screenshots/Devices.png" width="500" height="200">
 
 ### Filters
+<img src="/screenshots/Filters.png" width="300" height="300">
 
 
-## Analysis 
 
-## Recommendations
+## 📝Analysis 
+
+## 🎯Recommendations
 
 
