@@ -1,7 +1,7 @@
 # Tableau-monthly-marketing-performance
 Tableau dashboard and analysis of monthly marketing performance by channel, country, and device using ROAS, CAC, ARPU, ARPPU, payer conversion, and 90-day revenue metrics
 
-<img src="/screenshots/dashboard.png" width="700" height="500">
+<img src="/screenshots/dashboard.png" width="900" height="500">
 
 
 > [!NOTE]
@@ -105,6 +105,11 @@ These specific metrics were chosen because they cover the entire logic: costs �
 | **ARPPU (90 days)** | Average Revenue Per Paying User (`Revenue (90d) / Payers`). Measures spending depth among monetized users across channels and device types. |
 
 ### Heatmap ROAS
+<img src="/screenshots/Heatmap_ROAS.png" width="400" height="300">
+
+The Heatmap ROAS displays the performance of each channel × geo pair. A standard numerical table would be less visually clear, whereas a heatmap allows you to quickly identify "green" zones with high ROAS (100%+) and "red" zones where costs are not recovered (<100%).
+
+The primary metric chosen for this block is ROAS (90 days), as it directly demonstrates whether a channel recoups invested funds within a specific channel × geo segment. The interpretation baseline is ROAS = 100% / 1.0x: above this threshold, revenue exceeds spend; below it, costs do not break even. This makes the block essential for driving budget reallocation decisions across geographies and channels.
 
 ## Recommendations
 
