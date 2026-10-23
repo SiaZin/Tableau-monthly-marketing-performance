@@ -1,6 +1,8 @@
 # Tableau-monthly-marketing-performance
 Tableau dashboard and analysis of monthly marketing performance by channel, country, and device using ROAS, CAC, ARPU, ARPPU, payer conversion, and 90-day revenue metrics
 
+<img src="/screenshots/dashboard.png" width="700" height="500">
+
 ## Repository Structure
 
 ##🔡Data
