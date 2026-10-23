@@ -153,7 +153,40 @@ Notably, ROAS and CAC are not calculated by device OS in this block because mark
 * Interactive cross-filtering is also enabled directly from key visualizations: **Payer Conversion Rate over time** (by country), **Channels ROAS over time** (by channel), and **Heatmap ROAS** (by country-channel pair).
 
 
-## 📝Analysis 
+## 📝Analytical Findings
+#### Immature Cohorts (Under 90 Days Lifecycle)
+
+
+During historical data analysis, a sharp drop in performance metrics was observed in the final months of the timeline. Further investigation revealed this was driven by data characteristics in the `revenue_90d` field.
+
+The dataset contains records in `revenue_90d` even for user registrations where 90 days had not yet elapsed. For instance, records exist for `2026-05-11`, despite the dataset ending on `2026-05-13`, meaning the 90-day post-registration window could not have physically closed. This issue impacts the final months of the dataset: February, March, April, and May 2026.
+
+To validate this hypothesis, the monthly ratio of `revenue_7d / revenue_90d` was analyzed. Across most historical months, it remains stable at approximately 25–30%. However, beginning in March 2026, this ratio spikes sharply: 45.6% in March, 95.3% in April, and 295% in May. This confirms that `revenue_90d` for the closing months is incomplete and immature.
+
+Consequently, these final months severely distort key metrics such as ARPPU, ARPU, and ROAS, directly explaining the steep downward slope on dashboard trendlines. To prevent misleading business interpretations, the dashboard filters exclude these last four months (February, March, April, and May 2026) from the core 90-day revenue analysis.
+
+---
+#### Channel-Specific Deep Dive
+
+* **Meta (Q4 2025 Inefficiency):**
+  * Spend in Q4 2025 (October–December) grew by ~101% compared to Q3 2025.
+  * CAC surged by 71%, while payer conversion remained essentially flat.
+  * 90-day ROAS plummeted from ~0.41x down to ~0.24x, and registrations grew by only ~17%.
+  * *Diagnosis:* The team rapidly increased spend without proper quality controls or audience scaling thresholds, driving up media costs without a corresponding lift in paying user quality (or indicating potential accounting/tracking discrepancies).
+
+* **TikTok (Structural Underperformance):**
+  * Monthly 90-day ROAS hovers persistently between 0.07x and 0.11x.
+  * This reflects a systemic, structural issue rather than temporary creative fatigue. The acquired audience either does not match the product's Ideal Customer Profile (ICP) in these regions, or ad messaging creates expectations that the product does not fulfill.
+
+* **Email (High-Performing but Capacity-Constrained):**
+  * Profitable across all five target geos, delivering the highest 90-day ROAS: US (3.01x), UK (2.87x), DE (2.55x), PL (2.05x), and UA (1.41x).
+  * While highly efficient, it cannot scale infinitely. Incremental budgets should prioritize US, UK, and DE rather than spreading evenly, testing moderate scaling (+50%) rather than aggressive leaps (+300%).
+
+* **Google (Bifurcated Geo Performance):**
+  * Performance splits cleanly across markets: profitable in the UK (1.31x) and US (1.29x), but loss-making in DE (0.62x), PL (0.51x), and UA (0.36x).
+  * Rather than pausing Google entirely, the primary opportunity lies in intra-channel budget reallocation—trimming underperforming European regions and shifting capital into the UK and US.
+
+
 
 ## 🎯Recommendations
 
