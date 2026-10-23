@@ -3,7 +3,7 @@ Tableau dashboard and analysis of monthly marketing performance by channel, coun
 
 ## Repository Structure
 
-## Data
+##🔡Data
 Source: SKELAR Data Analytics Intensive (2026) 
 
 Data description:
@@ -27,5 +27,13 @@ Data description:
 |     is_payer    |	 0/1  |	    1	   |      Чи став юзер платником     |
 |    revenue_7d	  | float |	  12.40  |Виручка за 7 днів від реєстрації |
 |   revenue_90d   |	float |   48.90  |Виручка за 90 днів від реєстрації|
+
+## 📃Overview 
+
+
+> [!NOTE]
+> [ukr_marketing_channels_performance.pdf](ukr_marketing_channels_performance.pdf) - Full analysis in Ukrainian
+
+## Results
 
 
