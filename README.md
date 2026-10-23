@@ -110,6 +110,21 @@ The Heatmap ROAS displays the performance of each channel × geo pair. A standar
 
 The primary metric chosen for this block is ROAS (90 days), as it directly demonstrates whether a channel recoups invested funds within a specific channel × geo segment. The interpretation baseline is ROAS = 100% / 1.0x: above this threshold, revenue exceeds spend; below it, costs do not break even. This makes the block essential for driving budget reallocation decisions across geographies and channels.
 
+### CAC for payers & ARPPU over time
+
+### Payer Conversion Rate over time
+
+### Channels ROAS over time
+
+### Revenue vs Spend by channels
+
+### Devices performance
+
+### Filters
+
+
+## Analysis 
+
 ## Recommendations
 
 
