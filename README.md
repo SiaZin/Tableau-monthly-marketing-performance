@@ -8,7 +8,7 @@ Source: SKELAR Data Analytics Intensive (2026)
 
 Data description:
 
-spend.csv — expenses by channel
+[`spend.csv`](spend.csv) — expenses by channel
 | Field | Type | Example  |        Description        |
 | ----- | ---- | -------- | ------------------------- |
 |date   | date |2025-03-14|	       Дата витрат        |
@@ -16,7 +16,7 @@ spend.csv — expenses by channel
 |  geo  |string|	  US	  |     UA, PL, DE, US, UK    |
 | spend	|float |	 324.55 |	        Витрати у $       |
 
-users.csv - usesrs and revenue
+[`users.csv`](users.csv) — usesrs and revenue
 |      Field      | Type  | Example  |            Description          |
 | --------------- | ----- | -------- | ------------------------------- |
 |     id_user     |	string|U00012345 |	      Унікальний ID юзера      |
