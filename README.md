@@ -16,7 +16,7 @@ Data description:
 |  geo  |string|	  US	  |     UA, PL, DE, US, UK    |
 | spend	|float |	 324.55 |	       Expenses in $      |
 
-[`users.csv`](users.csv) — usesrs and revenue
+[`users.csv`](users.csv) — users and revenue
 |      Field      | Type  | Example  |               Description            |
 | --------------- | ----- | -------- | ------------------------------------ |
 |     id_user     |	string|U00012345 |	            Unique user ID          |
