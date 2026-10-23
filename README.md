@@ -34,7 +34,11 @@ Data description:
 
 
 > [!NOTE]
-> [ukr_marketing_channels_performance.pdf](ukr_marketing_channels_performance.pdf) - Full analysis in Ukrainian
+> Опис дашборду та висновки українською [ukr_marketing_channels_performance.pdf](ukr_marketing_channels_performance.pdf) 
+> 
+> My dashboard is published here [Tableau Public](https://public.tableau.com/views/MonthlyMarketingPerformanceReport_17792191120910/Dashboard1?:language=en-GB&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link) 
+>
+> Tableau Packaged Workbook here [Monthly_marketing_performance](Monthly_marketing_performance.twbx)  
 
 # Data preparation
 Before visualizing, I joined two tables. To perform the join, I aggregated `users.csv` to the day × channel × geo level (using `registration_date`) and joined it with `expenses.csv`. Used BigQuery and then connected it to Tableau.
