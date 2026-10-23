@@ -11,22 +11,22 @@ Data description:
 [`spend.csv`](spend.csv) — expenses by channel
 | Field | Type | Example  |        Description        |
 | ----- | ---- | -------- | ------------------------- |
-|date   | date |2025-03-14|	       Дата витрат        |
+|date   | date |2025-03-14|	     Date of expenses     |
 |channel|string| 	 Meta   |Meta, Google, TikTok, Email|
 |  geo  |string|	  US	  |     UA, PL, DE, US, UK    |
-| spend	|float |	 324.55 |	        Витрати у $       |
+| spend	|float |	 324.55 |	       Expenses in $      |
 
 [`users.csv`](users.csv) — usesrs and revenue
-|      Field      | Type  | Example  |            Description          |
-| --------------- | ----- | -------- | ------------------------------- |
-|     id_user     |	string|U00012345 |	      Унікальний ID юзера      |
-|registration_date|	date  |2025-04-02|	        Дата реєстрації        |
-|     channel     |	string|	 Google  |	       Канал залучення         |
-|       geo       |	string|	   DE    |	           Гео юзера           |
-|    device_os    |	string| 	 iOS   |    	   iOS, Android, Web       |
-|     is_payer    |	 0/1  |	    1	   |      Чи став юзер платником     |
-|    revenue_7d	  | float |	  12.40  |Виручка за 7 днів від реєстрації |
-|   revenue_90d   |	float |   48.90  |Виручка за 90 днів від реєстрації|
+|      Field      | Type  | Example  |               Description            |
+| --------------- | ----- | -------- | ------------------------------------ |
+|     id_user     |	string|U00012345 |	            Unique user ID          |
+|registration_date|	date  |2025-04-02|	          Registration date         |
+|     channel     |	string|	 Google  |	        Acquisition channel         |
+|       geo       |	string|	   DE    |	              User's geo            |
+|    device_os    |	string| 	 iOS   |    	      iOS, Android, Web         |
+|     is_payer    |	 0/1  |	    1	   |  Has the user become a paying user?  |
+|    revenue_7d	  | float |	  12.40  |Revenue from registration over 7 days |
+|   revenue_90d   |	float |   48.90  |Revenue from registration over 90 days|
 
 ## 📃Overview 
 
