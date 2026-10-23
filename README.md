@@ -39,8 +39,7 @@ Data description:
 |   revenue_90d   |	float |   48.90  |Revenue from registration over 90 days|
 
 ## 📃Overview 
-
-
+An interactive **Tableau** dashboard designed to evaluate paid acquisition efficiency, unit economics, and 90-day cohort return on investment (ROAS 90d) across channels and geographies. The project transforms raw marketing spend and registration/transaction data into actionable budget insights.
 
 # Data preparation
 Before visualizing, I joined two tables. To perform the join, I aggregated `users.csv` to the day × channel × geo level (using `registration_date`) and joined it with `expenses.csv`. Used BigQuery and then connected it to Tableau.
@@ -83,6 +82,10 @@ ORDER BY s.date, s.channel, s.geo;
 
 The results were saved to [`joined_tables.csv`](joined_tables.csv)
 
-## Results
+## Dashboard architecture
+
+
+
+## Recommendations
 
 
