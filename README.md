@@ -156,10 +156,16 @@ Notably, ROAS and CAC are not calculated by device OS in this block because mark
 ## 📝Analytical Findings
 #### Immature Cohorts (Under 90 Days Lifecycle)
 
+<p align="center">
+  <img src="/screenshots/last_months_drop_1.png" width="48%" />
+  <img src="/screenshots/last_months_drop_2.png" width="48%" />
+</p>
 
 During historical data analysis, a sharp drop in performance metrics was observed in the final months of the timeline. Further investigation revealed this was driven by data characteristics in the `revenue_90d` field.
 
 The dataset contains records in `revenue_90d` even for user registrations where 90 days had not yet elapsed. For instance, records exist for `2026-05-11`, despite the dataset ending on `2026-05-13`, meaning the 90-day post-registration window could not have physically closed. This issue impacts the final months of the dataset: February, March, April, and May 2026.
+
+> Screenshots in previous sections were taken with filter on, excluding those months to avoid confusion
 
 To validate this hypothesis, the monthly ratio of `revenue_7d / revenue_90d` was analyzed. Across most historical months, it remains stable at approximately 25–30%. However, beginning in March 2026, this ratio spikes sharply: 45.6% in March, 95.3% in April, and 295% in May. This confirms that `revenue_90d` for the closing months is incomplete and immature.
 
@@ -187,7 +193,11 @@ Consequently, these final months severely distort key metrics such as ARPPU, ARP
   * Rather than pausing Google entirely, the primary opportunity lies in intra-channel budget reallocation—trimming underperforming European regions and shifting capital into the UK and US.
 
 
-
 ## 🎯Recommendations
-
+| Channel | Action | Target / Adjustment | Rationale |
+| :--- | :--- | :--- | :--- |
+| **Email** | Increase | **+50%** | Delivers the highest mature 90-day ROAS (2.52x). Represents only 4.4% of total spend while generating 22.3% of 90-day revenue. Highly profitable across all five target geos. |
+| **Google** | Maintain overall budget, but heavily reallocate | **0% overall**;<br>shift **30%** of budget from DE / PL / UA to US / UK | The channel is near break-even overall (ROAS 90d = 0.91x), but splits sharply by market: profitable in the US (1.29x) and UK (1.31x), while significantly lagging in DE (0.62x), PL (0.51x), and UA (0.36x). Shifting capital to high-performing geos will elevate total channel returns. |
+| **Meta** | Decrease | **-70%** | Every target geo is below 0.42x. Q4 2025 results proved that scaling ad spend in this channel drove significantly more expensive traffic rather than higher-quality cohorts. |
+| **TikTok** | Decrease significantly, near complete pause | **-90%** | Critical underperformance: 90-day ROAS is 0.08x, payer conversion is 4.6%, and 90-day ARPU is $0.71 against a CAC of $8.45. No single geo exceeds even 0.10x ROAS. |
 
