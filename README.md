@@ -11,9 +11,7 @@ Tableau dashboard and analysis of monthly marketing performance by channel, coun
 >
 > Tableau Packaged Workbook here [Monthly_marketing_performance](Monthly_marketing_performance_report.twbx)  
 
-## Structure
-
-##🔡Data
+## 🔡Data
 Source: SKELAR Data Analytics Intensive (2026) 
 
 Data description:
