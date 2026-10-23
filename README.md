@@ -73,7 +73,7 @@ ORDER BY s.date, s.channel, s.geo;
 ```
 </details>
 
-The results were saved to [`users_agg.csv`](users.csv)
+The results were saved to [`joined_tables.csv`](joined_tables.csv)
 
 ## Results
 
