@@ -113,21 +113,44 @@ The primary metric chosen for this block is ROAS (90 days), as it directly demon
 ### CAC for payers & ARPPU over time
 <img src="/screenshots/CAC_ARPPU.png" width="400" height="300">
 
+This block compares CAC per payer and ARPPU 90d over time. Its goal is to show whether the cost of acquiring a paying user aligns with how much an average paying customer generates.\
+It is crucial to analyze these two metrics together. If CAC per payer increases while ARPPU fails to grow alongside it, it signals deteriorating acquisition unit economics. A line chart was chosen because tracking trends and dynamic changes over time is essential here.
+
 ### Payer Conversion Rate over time
 <img src="/screenshots/Payer_conversion_rate.png" width="400" height="300">
+
+This block displays the dynamic trend of registration-to-payer conversion segmented by geography. Payer Conversion was selected because it reflects the quality of acquired users: high registration volumes on their own do not guarantee business results if users fail to convert into paying customers.
+
+The geographic breakdown is essential because user behavior varies significantly across different markets. It helps assess whether budget reallocation should occur not only across acquisition channels, but also across target countries.
 
 ### Channels ROAS over time
 <img src="/screenshots/Channels_ROAS.png" width="400" height="400">
 
+The Channels ROAS over time chart illustrates how the return on ad spend for each channel evolves dynamically. It ensures decisions are not based solely on aggregate results over the entire period. A channel might look healthy on average but deteriorate sharply in recent months; conversely, a historically weak channel might show improving momentum.
+
+A line chart was chosen because it is best suited for highlighting trends, seasonality and potential anomalies.
+
 ### Revenue vs Spend by channels
 <img src="/screenshots/Revenue_Spend.png" width="400" height="500">
+
+This block directly compares 90-day Revenue against Spend across each acquisition channel. It is separated into its own view because ROAS, as a relative ratio, does not always communicate the absolute scale of a problem or an opportunity.
+
+A bar chart is ideal for this comparison, as it immediately highlights channels where expenses heavily exceed incoming revenue, versus channels that deliver substantial revenue relative to their allocated budget.
 
 ### Devices performance
 <img src="/screenshots/Devices.png" width="500" height="200">
 
+The Devices performance block presents metrics broken down by device OS: Android, iOS, and Web. The selected metrics include registrations, Payer Conversion, ARPU 90d, and ARPPU 90d, helping evaluate whether the operating system impacts paying conversion rates and average monetization value.
+
+Notably, ROAS and CAC are not calculated by device OS in this block because marketing spend data does not include an OS-level breakdown. Consequently, it is impossible to accurately determine how much ad budget was allocated specifically to iOS, Android, or Web.
+
 ### Filters
 <img src="/screenshots/Filters.png" width="300" height="300">
 
+* Organized into a collapsible side panel accessible via the **Show Filters** button in the upper-left corner, and closed with the **Hide Filters** button.
+* Filtering applies globally across all dashboard blocks and KPIs.
+* Slicing is available by month-year, acquisition channel, and country.
+* Interactive cross-filtering is also enabled directly from key visualizations: **Payer Conversion Rate over time** (by country), **Channels ROAS over time** (by channel), and **Heatmap ROAS** (by country-channel pair).
 
 
 ## 📝Analysis 
